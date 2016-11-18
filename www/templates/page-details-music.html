@@ -1,0 +1,57 @@
+<ion-view view-title="&Aacute;lbumes" class="bg-positive">
+    <ion-nav-title class="logo"><img src="img/logo.svg" height="30px" alt=""></ion-nav-title>
+    <ion-nav-buttons side="right">
+        <a class="button button-icon sr-home" href="#/app/pageDetails"></a>
+    </ion-nav-buttons>
+    <ion-content pagedetailsList>
+        <div class="music-cover-bg"> <img src="img/music-cover.jpg" alt="">
+            <button class="button sr-more button-icon button-more button-light" ng-click="popoverMusic.show($event)"></button>
+            <div class="music-info">
+                <h2>Sura Boleros</h2>
+                <button class="button button-calm button-round button-smal" ng-click="playerModal.show()"><i class="sr-play"></i> Reproducir</button>
+            </div>
+        </div>
+        <div class="list no-bg no-lines border-dark">
+            <a class="item" ng-click="openModal('Cabas')">
+                <h2>Sabr&aacute; Dios</h2>
+                <p>Cabas</p>
+            </a>
+            <a class="item" ng-click="openModal('Albert')">
+                <h2>Historia De Un Amor</h2>
+                <p>Alberto Plaza</p>
+            </a>
+            <a class="item" ng-click="openModal('Santi')">
+                <h2>Yo Lo Comprendo</h2>
+                <p>Santiago Cruz</p>
+            </a>
+            <a class="item" ng-click="openModal('Carlos')">
+                <h2>Por Debajo De La Mesa</h2>
+                <p>Carlos Ponce</p>
+            </a>
+            <a class="item" ng-click="openModal('Lucas')">
+                <h2>Llorar Por Dentro</h2>
+                <p>Lucas Arnau</p>
+            </a>
+            <a class="item" ng-click="openModal('Cabas')">
+                <h2>La Gloria Eres T&uacute;</h2>
+                <p>Chabuco</p>
+            </a>
+            <a class="item" ng-click="openModal('Jorge')">
+                <h2>No Te Importa Saber</h2>
+                <p>Jorge Villamizar</p>
+            </a>
+            <a class="item" ng-click="openModal('Victor')">
+                <h2>Madrigal</h2>
+                <p>Victor Manuel</p>
+            </a>
+            <a class="item" ng-click="openModal('Ana')">
+                <h2>Contigo En La Distancia</h2>
+                <p>Ana Bel&eacute;n</p>
+            </a>
+            <a class="item" ng-click="openModal('Jose')">
+                <h2>Cuando Te Beso</h2>
+                <p>Jos&eacute; Gaviria</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

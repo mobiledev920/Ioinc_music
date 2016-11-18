@@ -1,0 +1,292 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+$positive:#13294C !default;
+$calm:#009C90 !default;
+
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+$cover_bg: url(../img/music-cover-bg.png);
+
+//Header Gradiant color
+$grad_one: rgba(28,125,194,1);
+$grad_two: rgba(37,82,160,1);
+
+//Activated BG
+$activated:rgba(0,0,0,.1);
+//Text Color
+$w:#ffffff;
+
+//Item Border
+$item_order:#0A1730;
+
+//Styling
+body{
+    font-size: 1em;
+}
+a,.button{-webkit-transition: all .3s ease;
+transition: all .3s ease;}
+
+
+.bar{
+    &.bar-positive {
+        &.bg-primary{
+            background: $grad_one;
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, $grad_one), color-stop(100%, $grad_two));
+            background: -webkit-linear-gradient(top, $grad_one 0%, $grad_two 100%);
+            background: linear-gradient(to bottom, $grad_one 0%, $grad_two 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c7dc2', endColorstr='#2552a0', GradientType=0 );
+        }
+    }
+}
+.button{
+    font-weight: 500;
+    &.button-round{
+        border-radius: 30px;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    i{
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+    }
+}
+
+.bar{
+    &.bar-header{
+        height: 54px;
+    }
+    .title{
+        height: 53px;
+        .logo{
+            img{
+                margin-top: 12px;
+            }
+        }
+    }
+}
+ion-content{
+    &.scroll-content {
+        &.has-header{
+            top: 54px;
+        }
+    }
+}
+.bg-positive{
+    background: $positive;
+    .list{
+        .item{
+            color: $w;
+            h2{
+                color: $w;
+            }
+            p{
+                color: $w;
+            }
+        }
+    }
+}
+.list{
+    .item{
+        h2{
+            font-weight: 600;
+        }
+        &.item-center{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+    &.no-lines{
+        .item{
+            border: none;margin: 0;
+        }
+    }
+    &.no-bg{
+        .item{
+            background: none;
+        }
+    }
+    &.border-dark{
+        .item{
+            border-color: $item_order;
+            &.activated{
+                background: $activated;
+            }
+        }
+    }
+}
+
+
+.music-cover-bg{
+    background:$cover_bg ;
+    padding: 2.5em 1em 4.5em;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    img{
+       max-width: 100%;
+       max-height: 100%;
+        display: inline-block;
+    }
+    .music-info {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: -22px;
+        h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: $w;
+        }
+    }
+}
+[pagedetails] {
+    .scroll {
+        height: 100%;
+    }
+    .music-info {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        left: 0;
+        bottom: -22px;
+        h2 {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: $w;
+        }
+    }
+    .row {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 110px;
+        padding-top: 2.2em;
+        .button {
+            height: 80px;
+            line-height: 1.1em;
+            font-size: .7em;
+            font-weight: 300;
+            i {
+                display: block;
+                font-size: 3em;
+            }
+        }
+    }
+    .music-cover-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: -webkit-calc(100% - 110px);
+        height: -moz-calc(100% - 110px);
+        height: calc(100% - 110px);
+    }
+}
+[pagedetailsList]{
+    .list{
+        margin-top: 30px;
+    }
+    .music-cover-bg {
+        height: 260px;
+    }
+    .button-more{
+        position: absolute;
+        z-index: 9;
+        color: #fff;
+        font-size: 2em;
+        right: 0px;
+        top: 0;
+    }
+}
+[musicplayer]{
+    .scroll {
+        height: 100%;
+    }
+    .button-close{
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        font-size: 2em;
+        z-index: 9;
+    }
+    .music-cover-bg {
+        padding: 3em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: -webkit-calc(100% - 180px);
+        height: -moz-calc(100% - 180px);
+        height: calc(100% - 180px);
+        
+    }
+    .music-player{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 180px;
+        .item{
+            &.title{
+                padding: 1.2em 0 0;
+            }
+            &.range{
+                font-weight: 300;
+                font-size: .8em;
+                input::-webkit-slider-thumb{
+                    width: 3px;
+                    border-radius: 1px;
+                }
+            }
+        }
+        .control{
+            max-width: 300px;
+            margin: 0 auto;
+            .row{
+                padding: 0;
+                .col{
+                    padding: 0;
+                    .button{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+    }
+}

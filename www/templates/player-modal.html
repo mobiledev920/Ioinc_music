@@ -1,0 +1,25 @@
+<ion-modal-view class="bg-positive">
+    <ion-content musicplayer >
+        <button class="button button-icon button-light button-close sr-arrow-bottom" ng-click="playerModal.hide()"></button>
+        <div class="music-cover-bg"> <img src="img/music-cover.jpg" alt="">
+            <div class="music-info"> </div>
+        </div>
+        <div class="music-player list no-bg no-lines">
+            <div class="title item text-center">
+                <h2> {{name || '--'}}</h2>
+                <p>{{artist || '--'}}</p>
+            </div>
+            <div class="control">
+                <div class="row">
+                    
+                    <div class="col"> <a href="" class="button button-clear button-light"><i class="sr-backword" ng-click="rewindAudio()"></i></a> </div>
+                    <div class="col"> <a href="" class="button button-clear button-light" ng-click="resumeAudio()"><i class="sr-play1"></i></a> </div>
+                    <div class="col"> <a href="" class="button button-clear button-light"><i class="sr-forward" ng-click="forwardAudio()"></i></a> </div>
+                    
+                </div>
+            </div>
+            <div class="item range range-balanced"> <span>00:00</span>
+                    <input type="range" name="volume" min="0" max="100" value="{{position}}"> <span>{{tracklength}}</span> </div>
+        </div>
+    </ion-content>
+</ion-modal-view>
